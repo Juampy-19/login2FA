@@ -1,0 +1,25 @@
+[
+  {
+    "id": 1,
+    "firstName": "Pepe",
+    "lastName": "Pateatraseros",
+    "email": "pepepateatraseros@hotmail.com",
+    "password": "$2b$10$vJMzv64Nn0KH6Mn3tYyms.UCrdhK9NgPXLUZ5lKY2UPyNlzRDeBgi"
+  },
+  {
+    "id": 2,
+    "firstName": "Juan Pablo",
+    "lastName": "Castellano",
+    "email": "jpcastellano1990@gmail.com",
+    "password": "$2b$10$uWQ5qLw8gDHEIRsp5hn.Gu/IgpYDWS9QDxRkBcNULzV7pCx8SO.HS",
+    "securityCode": null
+  },
+  {
+    "id": 3,
+    "firstName": "Jose Pepe",
+    "lastName": "Argento",
+    "email": "pepeargento@yahoo.com",
+    "password": "$2b$10$CAtI8xCbATRSAKeaW758Peq1o2Pz87NLTV0NgbEsbi7A3kZPihsFy",
+    "securityCode": null
+  }
+]

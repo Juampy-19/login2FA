@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include('./partials/head.ejs') %>
+    <link rel="stylesheet" href="/css/register.css">
+
+<body>
+    <section class="registerSection">
+        <h1>Registro</h1>
+
+        <form action="/register" method="POST">
+            <ul id="errorsFormRegister"></ul>
+
+            <div class="firstName">
+                <label for="firstName">Nombre:</label>
+                <input type="text" name="firstName" id="firstName" placeholder="Nombre" value="<%= locals.oldData && !locals.errors.firstName ?  locals.oldData.firstName: '' %>">
+            </div>
+            <% if (locals.errors && errors.firstName) { %>
+                <div class="textDangerError">
+                    <%= errors.firstName.msg %>
+                </div>
+            <% } %>
+
+            <div class="lastName">
+                <label for="lastName">Apellido:</label>
+                <input type="text" name="lastName" id="lastName" placeholder="Apellido" value="<%= locals.oldData && !locals.errors.lastName ? locals.oldData.lastName: '' %>">
+            </div>
+            <% if (locals.errors && errors.lastName) { %>
+                <div class="textDangerError">
+                    <%= errors.lastName.msg %>
+                </div>
+            <% } %>
+
+            <div class="email">
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" placeholder="Email" value="<%= locals.oldData && !locals.errors.email ? locals.oldData.email: '' %>">
+            </div>
+            <% if (locals.errors && errors.email) { %>
+                <div class="textDangerError">
+                    <%= errors.email.msg %>
+                </div>
+            <% } %>
+
+            <div class="password">
+                <label for="password">Contraseña:</label>
+                <input type="password" name="password" id="password" placeholder="Contraseña">
+            </div>
+            <% if (locals.errors && errors.password) { %>
+                <div class="textDangerError">
+                    <%= errors.password.msg %>
+                </div>
+            <% } %>
+
+            <div class="repeatPassword">
+                <label for="repeatPassword">Repetir contraseña:</label>
+                <input type="password" name="repeatPassword" id="repeatPassword" placeholder="Contraseña">
+            </div>
+            <% if (locals.errors && errors.repeatPassword) { %>
+                <div class="textDangerError">
+                    <%= errors.repeatPassword.msg %>
+                </div>
+            <% } %>
+
+            <button type="submit" class="buttonRegister">Registrarse</button>
+        </form>
+
+    <div class="buttons">
+        <a href="/"><button>Home</button></a>
+        <a href="/login"><button>Login</button></a>
+    </div>
+    </section>
+
+    <%- include('./partials/footer.ejs') %>
+
+</body>
+</html>

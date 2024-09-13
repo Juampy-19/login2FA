@@ -1,0 +1,82 @@
+.loginSection {
+    background-color: var(--azulOscuro);
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    width: 70%;
+    margin: auto;
+    border: 3px solid var(--amarillo);
+}
+
+.loginSection h1 {
+    margin-top: 15px;
+}
+
+form {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    border: 1px solid var(--amarillo);
+    width: 80%;
+    margin: 30px 0;
+}
+
+.user {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.user label {
+    grid-column: 1 / 2;
+    font-size: 24px;
+}
+
+.user input {
+    grid-column: 2 / 3;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid var(--amarillo);
+    border-radius: 10px;
+    height: 30px;
+}
+
+.password {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.password label {
+    grid-column: 1 / 2;
+    font-size: 24px;
+}
+
+.password input {
+    grid-column: 2 / 3;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid var(--amarillo);
+    border-radius: 10px;
+    height: 30px;
+}
+
+.buttonIngresar {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: var(--amarillo);
+    color: var(--azulOscuro);
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.errorMessage {
+    width: 100%;
+    text-align: center;
+    color: red;
+}

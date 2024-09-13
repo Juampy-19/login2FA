@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include('./partials/head.ejs') %>
+    <link rel="stylesheet" href="/css/viewUser.css">
+
+<body>
+    <section class="viewUserSection">
+    
+        <h1>Vista de usuario</h1>
+
+        <% if (user) { %>
+            <h2>Bienvenido</h2>
+
+            <img src="/img/mario.avif" class="mario">
+
+            <h4>Nombre: <%= user.firstName %></h4>
+            <h4>Apellido: <%= user.lastName %></h4>
+            <h4>Email: <%= user.email %></h4>
+    
+            <a href="/logout">
+                <button>Cerrar sesión</button>
+            </a>
+        <% } else { %>
+            <h2>No tiene acceso.</h2>
+            <h2>Por favor, inicie sesión.</h2>
+
+            <img src="/img/monito.gif" class="monito">
+            
+            <a href="/login">
+                <button>Iniciar Sesión</button>
+            </a>
+        <% } %>
+
+    </section>
+
+    <%- include('./partials/footer.ejs') %>
+
+</body>
+</html>

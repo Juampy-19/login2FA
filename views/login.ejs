@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include('./partials/head.ejs') %>
+    <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="/css/modal.css">
+
+<body>
+    <section class="loginSection">
+        <h1>Login</h1>
+
+        <form action="/login" id="loginForm" method="POST">
+            <!-- <ul id="errorsFormLogin"></ul> -->
+
+            <div class="user">
+                <label>Email:</label>
+                <input type="email" name="email" placeholder="Email" value="<%= locals.oldData && !locals.errors.email ? locals.oldData.email: '' %>">
+            </div>
+            <div id="emailError" class="errorMessage"></div>
+
+            <div class="password">
+                <label>Contraseña:</label>
+                <input type="password" name="password" placeholder="Contraseña">
+            </div>
+            <div id="passwordError" class="errorMessage"></div>
+
+            <button type="submit" class="buttonIngresar">Ingresar</button>
+        </form>
+
+        <div class="buttons">
+            <a href="/"><button>Home</button></a>
+            <a href="/register"><button>Registro</button></a>
+        </div>
+    </section>
+
+    <%- include('./partials/modal.ejs') %>
+
+    <%- include('./partials/footer.ejs') %>
+
+</body>
+
+    <script src="/js/login.js"></script>
+
+</html>
